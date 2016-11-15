@@ -4,6 +4,7 @@
   <% @contacts.each do |contact| %>
   <li>
     <%= contact.name + ": " + contact.address + " - " + contact.phone + " - " + contact.email %>
+    <a href ="/contacts/<%= contact.id %>">Show contact</a>
   </li>
   <% end %>
 </ul>

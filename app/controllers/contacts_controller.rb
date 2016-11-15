@@ -13,4 +13,9 @@ class ContactsController < ApplicationController
     # render(:text => contact.attributes)
   end
 
+  def show
+    id = params[:id]
+    @contact = Contact.find_by(id: id)
+  end
+
 end
