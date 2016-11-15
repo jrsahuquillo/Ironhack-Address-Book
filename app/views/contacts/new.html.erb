@@ -21,6 +21,7 @@
   <div>
     <label for="contact_email">Email</label><br>
     <input type="email" name="contact[email]" id="contact_email">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   </div>
   <br>
   <button type="submit">Add this contact</button>

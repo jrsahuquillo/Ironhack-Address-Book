@@ -4,12 +4,13 @@ class ContactsController < ApplicationController
   end
 
   def create
-    @contact = Contact.new(name: params[:contact][:name],
+    contact = Contact.new(name: params[:contact][:name],
                     address: params[:contact][:address],
                     phone: params[:contact][:phone],
                     email: params[:contact][:email])
-    @contact.save
+    contact.save
     redirect_to('/contacts')
+    # render(:text => contact.attributes)
   end
 
 end
